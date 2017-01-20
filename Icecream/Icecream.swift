@@ -96,7 +96,7 @@ class Icecream {
             let isNotLast = name != allNames.last!
             let flavor = favoriteFlavorsOfIceCream[name]!
             if isNotLast {
-                list += "\(name) liskes \(flavor)\n"
+                list += "\(name) likes \(flavor)\n"
             } else {
                 list += "\(name) likes \(flavor)"
             }
