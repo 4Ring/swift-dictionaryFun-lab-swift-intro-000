@@ -1,12 +1,4 @@
-//
-//  Icecream.swift
-//  Icecream
-//
-//  Created by James Campagno on 9/19/16.
-//  Copyright © 2016 Flatiron School. All rights reserved.
-//
 
-class Icecream {
     
     var favoriteFlavorsOfIceCream: [String: String] = [
         "Joe": "Peanut Butter and Chocolate",
@@ -16,7 +8,7 @@ class Icecream {
         "Tom": "Mexican Chocolate",
         "Jim": "Natural Vanilla",
         "Susan": "Cookies 'N' Cream",
-    ]
+        ]
     
     
     func names(forFlavor flavor: String) -> [String] {
@@ -24,7 +16,7 @@ class Icecream {
         
         for (name, icecream) in favoriteFlavorsOfIceCream {
             if icecream == flavor {
-            names.append(name)
+                names.append(name)
             }
         }
         return names
@@ -46,7 +38,7 @@ class Icecream {
     func flavor(forPerson person: String) -> String? {
         return favoriteFlavorsOfIceCream[person]
     }
-   
+    
     
     func replace(flavor: String, forPerson person: String) -> Bool {
         if favoriteFlavorsOfIceCream[person] != nil {
@@ -56,7 +48,7 @@ class Icecream {
             return false
         }
     }
-   
+    
     
     func remove(person: String) -> Bool {
         if favoriteFlavorsOfIceCream[person] != nil {
@@ -86,7 +78,7 @@ class Icecream {
         }
     }
     
-
+    
     func attendeeList() -> String {
         var list: String = ""
         
@@ -96,7 +88,7 @@ class Icecream {
             let isNotLast = name != allNames.last!
             let flavor = favoriteFlavorsOfIceCream[name]!
             if isNotLast {
-                list += "\(name) liskes \(flavor)\n"
+                list += "\(name) likes \(flavor)\n"
             } else {
                 list += "\(name) likes \(flavor)"
             }
@@ -104,4 +96,21 @@ class Icecream {
         
         return list
     }
-}
+
+print(attendeeList())
+add(person: "Slav", withFlavor: "Strawberry")
+print(attendeeList())
+numberOfAttendees()
+remove(person: "Tim")
+print(attendeeList())
+numberOfAttendees()
+replace(flavor: "Nuts", forPerson: "Slav")
+print(attendeeList())
+flavor(forPerson: "Slav")
+
+count(forFlavor: "Natural Vanilla")
+
+names(forFlavor: "Natural Vanilla")
+
+
+
